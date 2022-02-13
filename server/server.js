@@ -4,12 +4,17 @@ import cors from 'cors'
 import mongoose from 'mongoose'
 import 'dotenv/config'
 import router from './routes/posts.js'
+import authrouter from './routes/user.js'
 
 const app = express()
 const port = process.env.PORT || 8000
 app.use(cors())
 app.use(bodyParser.json({ limit: '30mb', extended: true }))
+app.use('/', authrouter)
 app.use('/post', router)
+app.use('/', (_, res) => {
+  res.send('<h2> Welcome to MEMORIES </h2>')
+})
 app.use((_, res, next) => {
   res.header('Access-Control-Allow-Origin', '*')
   res.header(

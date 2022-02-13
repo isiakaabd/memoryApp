@@ -1,10 +1,14 @@
 import mongoose from 'mongoose'
+import User from './userSchema.js'
 const postSchema = mongoose.Schema(
   {
     title: { type: String, required: true },
     message: { type: String, required: true },
-    creator: { type: String, required: true },
     tags: { type: [String] },
+    userId: {
+      type: String,
+    },
+
     image: {
       type: String,
       default: null, //change to image

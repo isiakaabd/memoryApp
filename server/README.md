@@ -1,5 +1,5 @@
 A fullstack Memory App that allow users to save memories. 
 
-Api endpoint
+Api link
 
 https://remlad-memories.herokuapp.com/
