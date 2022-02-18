@@ -1,0 +1,54 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "google",
+        "plugin:promise/recommended",
+        "eslint-config-prettier"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "eslint-plugin-prettier"
+    ],
+    "rules": {
+        "no-unused-vars": ["warn", { "args": "none", "argsIgnorePattern": "req|res|next|val" }],
+        "prettier/prettier": ["warn"],
+        "lines-around-comment": [
+            "error",
+            {
+              "beforeBlockComment": true,
+              "afterBlockComment": true,
+              "beforeLineComment": true,
+              "afterLineComment": true,
+              "allowBlockStart": true,
+              "allowBlockEnd": true,
+              "allowObjectStart": true,
+              "allowObjectEnd": true,
+              "allowArrayStart": true,
+              "allowArrayEnd": true
+            }
+          ],
+          "promise/always-return": "error",
+          "promise/no-return-wrap": "error",
+          "promise/param-names": "error",
+          "promise/catch-or-return": "error",
+          "promise/no-native": "off",
+          "promise/no-nesting": "warn",
+          "promise/no-promise-in-callback": "warn",
+          "promise/no-callback-in-promise": "warn",
+          "promise/avoid-new": "warn",
+          "promise/no-new-statics": "error",
+          "promise/no-return-in-finally": "warn",
+          "promise/valid-params": "warn"
+        }
+}
